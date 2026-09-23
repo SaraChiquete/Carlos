@@ -1598,7 +1598,7 @@ modalSolicitar.addEventListener('click', () => {
 const formContacto = document.getElementById('formContacto');
 const formConfirmacion = document.getElementById('formConfirmacion');
 
-formContacto.addEventListener('submit', (e) => {
+formContacto.addEventListener('submit', async (e) => {
   e.preventDefault();
   let valido = true;
 
@@ -1623,19 +1623,32 @@ formContacto.addEventListener('submit', (e) => {
   if(!valido) return;
 
   const datos = new FormData(formContacto);
-  const solicitudes = JSON.parse(localStorage.getItem('solicitudesContacto') || '[]');
-  solicitudes.unshift({
-    fecha: new Date().toLocaleString('es-MX'),
+  const payload = {
     nombre: datos.get('nombre'),
     correo: datos.get('correo'),
     telefono: datos.get('telefono'),
     servicio: datos.get('servicio') || 'No especificado',
     mensaje: datos.get('mensaje')
-  });
-  localStorage.setItem('solicitudesContacto', JSON.stringify(solicitudes));
+  };
 
-  formContacto.style.display = 'none';
-  formConfirmacion.style.display = 'block';
+  try {
+    const respuesta = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    const resultado = await respuesta.json();
+
+    if (!respuesta.ok || !resultado.success) {
+      throw new Error(resultado.message || 'No se pudo enviar el mensaje.');
+    }
+
+    formContacto.style.display = 'none';
+    formConfirmacion.style.display = 'block';
+  } catch (error) {
+    alert(error.message || 'Ocurrió un error al enviar el mensaje.');
+  }
 });
 
 /* Quita el estado de error en cuanto el usuario empieza a corregir */

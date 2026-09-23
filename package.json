@@ -1,0 +1,12 @@
+{
+  "name": "carlos-chiquete-landing",
+  "version": "1.0.0",
+  "description": "Sitio web de Carlos Chiquete con formulario funcional",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -41,35 +41,45 @@ button:hover{background:var(--azul)}
 const contenedor = document.getElementById('solicitudes');
 const contador = document.getElementById('contador');
 
-function mostrarSolicitudes(){
-  const solicitudes = JSON.parse(localStorage.getItem('solicitudesContacto') || '[]');
-  contador.textContent = `${solicitudes.length} solicitud${solicitudes.length === 1 ? '' : 'es'}`;
+async function mostrarSolicitudes(){
+  try {
+    const respuesta = await fetch('/api/messages');
+    const solicitudes = await respuesta.json();
+    contador.textContent = `${solicitudes.length} solicitud${solicitudes.length === 1 ? '' : 'es'}`;
 
-  if(!solicitudes.length){
-    contenedor.innerHTML = '<div class="vacio">Todavia no hay solicitudes.</div>';
-    return;
+    if(!solicitudes.length){
+      contenedor.innerHTML = '<div class="vacio">Todavia no hay solicitudes.</div>';
+      return;
+    }
+
+    contenedor.innerHTML = solicitudes.map(solicitud => `
+      <article class="solicitud">
+        <h2>${escapeHtml(solicitud.nombre)}</h2>
+        <p class="fecha">${escapeHtml(solicitud.fecha)}</p>
+        <p class="dato"><strong>Correo:</strong> ${escapeHtml(solicitud.correo)}</p>
+        <p class="dato"><strong>Telefono:</strong> ${escapeHtml(solicitud.telefono)}</p>
+        <p class="dato"><strong>Servicio:</strong> ${escapeHtml(solicitud.servicio)}</p>
+        <p class="mensaje"><strong>Mensaje:</strong><br>${escapeHtml(solicitud.mensaje)}</p>
+      </article>
+    `).join('');
+  } catch (error) {
+    contador.textContent = 'No se pudieron cargar las solicitudes.';
+    contenedor.innerHTML = '<div class="vacio">Ocurrió un error al cargar los mensajes.</div>';
   }
-
-  contenedor.innerHTML = solicitudes.map(solicitud => `
-    <article class="solicitud">
-      <h2>${escapeHtml(solicitud.nombre)}</h2>
-      <p class="fecha">${escapeHtml(solicitud.fecha)}</p>
-      <p class="dato"><strong>Correo:</strong> ${escapeHtml(solicitud.correo)}</p>
-      <p class="dato"><strong>Telefono:</strong> ${escapeHtml(solicitud.telefono)}</p>
-      <p class="dato"><strong>Servicio:</strong> ${escapeHtml(solicitud.servicio)}</p>
-      <p class="mensaje"><strong>Mensaje:</strong><br>${escapeHtml(solicitud.mensaje)}</p>
-    </article>
-  `).join('');
 }
 
 function escapeHtml(valor){
   return String(valor).replace(/[&<>'"]/g, caracter => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[caracter]));
 }
 
-document.getElementById('borrar').addEventListener('click', () => {
-  if(confirm('Se borraran todas las solicitudes guardadas en este navegador.')){
-    localStorage.removeItem('solicitudesContacto');
-    mostrarSolicitudes();
+document.getElementById('borrar').addEventListener('click', async () => {
+  if(confirm('Se borraran todas las solicitudes guardadas en el servidor.')){
+    try {
+      await fetch('/api/messages', { method: 'DELETE' });
+      mostrarSolicitudes();
+    } catch (error) {
+      alert('No se pudieron borrar las solicitudes.');
+    }
   }
 });
 
