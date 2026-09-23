@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitudes de contacto</title>
+<style>
+:root{--azul:#12263F;--acento:#3E7CB1;--fondo:#F5F6F8;--borde:#E1E5EA;--texto:#2B2F36;--gris:#5B6472;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:var(--texto);background:var(--fondo);line-height:1.5}
+header{background:var(--azul);color:#fff;padding:28px 24px}
+header div,main{max-width:1100px;margin:auto}
+h1{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:6px}
+header p{color:#dce7f2}
+header a{display:inline-block;margin-top:14px;color:#fff;text-decoration:underline}
+main{padding:32px 24px}
+.barra{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.contador{color:var(--gris)}
+button{border:0;border-radius:6px;padding:11px 16px;background:var(--acento);color:#fff;font-weight:bold;cursor:pointer}
+button:hover{background:var(--azul)}
+.solicitudes{display:grid;gap:16px}
+.solicitud{background:#fff;border:1px solid var(--borde);border-radius:8px;padding:22px;box-shadow:0 4px 14px rgba(18,38,63,.06)}
+.solicitud h2{color:var(--azul);font-size:1.15rem;margin-bottom:4px}
+.fecha{color:var(--gris);font-size:.85rem;margin-bottom:14px}
+.dato{margin-top:7px}.dato strong{color:var(--azul)}
+.mensaje{white-space:pre-wrap;border-top:1px solid var(--borde);margin-top:16px;padding-top:14px}
+.vacio{text-align:center;background:#fff;border:1px dashed var(--borde);padding:42px 20px;color:var(--gris);border-radius:8px}
+@media(max-width:600px){main{padding:24px 16px}.solicitud{padding:18px}}
+</style>
+</head>
+<body>
+<header><div><h1>Solicitudes de contacto</h1><p>Consulta los mensajes enviados desde tu página.</p><a href="index.html#contacto">Volver al formulario</a></div></header>
+<main>
+  <div class="barra">
+    <p class="contador" id="contador">Cargando solicitudes...</p>
+    <button type="button" id="borrar">Borrar todas</button>
+  </div>
+  <section class="solicitudes" id="solicitudes"></section>
+</main>
+<script>
+const contenedor = document.getElementById('solicitudes');
+const contador = document.getElementById('contador');
+
+function mostrarSolicitudes(){
+  const solicitudes = JSON.parse(localStorage.getItem('solicitudesContacto') || '[]');
+  contador.textContent = `${solicitudes.length} solicitud${solicitudes.length === 1 ? '' : 'es'}`;
+
+  if(!solicitudes.length){
+    contenedor.innerHTML = '<div class="vacio">Todavia no hay solicitudes.</div>';
+    return;
+  }
+
+  contenedor.innerHTML = solicitudes.map(solicitud => `
+    <article class="solicitud">
+      <h2>${escapeHtml(solicitud.nombre)}</h2>
+      <p class="fecha">${escapeHtml(solicitud.fecha)}</p>
+      <p class="dato"><strong>Correo:</strong> ${escapeHtml(solicitud.correo)}</p>
+      <p class="dato"><strong>Telefono:</strong> ${escapeHtml(solicitud.telefono)}</p>
+      <p class="dato"><strong>Servicio:</strong> ${escapeHtml(solicitud.servicio)}</p>
+      <p class="mensaje"><strong>Mensaje:</strong><br>${escapeHtml(solicitud.mensaje)}</p>
+    </article>
+  `).join('');
+}
+
+function escapeHtml(valor){
+  return String(valor).replace(/[&<>'"]/g, caracter => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[caracter]));
+}
+
+document.getElementById('borrar').addEventListener('click', () => {
+  if(confirm('Se borraran todas las solicitudes guardadas en este navegador.')){
+    localStorage.removeItem('solicitudesContacto');
+    mostrarSolicitudes();
+  }
+});
+
+mostrarSolicitudes();
+</script>
+</body>
+</html>
