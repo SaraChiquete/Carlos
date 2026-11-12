@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "1790134412418b6080944357f98",
+    "fecha": "22/9/2026, 8:33:32 p.m.",
+    "nombre": "Prueba Render",
+    "correo": "prueba@test.com",
+    "telefono": "6641234567",
+    "servicio": "Orientación y asesoría familiar",
+    "mensaje": "Mensaje de prueba desde navegador."
+  }
+]

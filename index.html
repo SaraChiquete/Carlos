@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carlos Alonso Chiquete Cázares | Orientación Familiar &amp; Capacitación</title>
+<title>Carlos Chiquete | Servicios y capacitación</title>
 
 <!-- Google Fonts: Sora para títulos, Inter para cuerpo de texto -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -340,146 +340,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .hero-foto .fake-placeholder small{font-size:0.8rem;line-height:1.5;}
 
 /* ============================================
-   4. SOBRE MÍ
-   ============================================ */
-.sobre-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:start;
-}
-
-.sobre-texto p{
-  color:var(--gris-texto);
-  margin-bottom:18px;
-  font-size:1.02rem;
-}
-
-.tarjetas-destacado{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.tarjeta-destacado{
-  background:var(--blanco);
-  border:1px solid var(--gris-borde);
-  border-radius:var(--radio);
-  padding:26px 22px;
-  box-shadow:var(--sombra);
-  transition:transform var(--transicion), box-shadow var(--transicion);
-}
-.tarjeta-destacado:hover{
-  transform:translateY(-4px);
-  box-shadow:var(--sombra-hover);
-}
-.tarjeta-destacado i{
-  font-size:1.5rem;
-  color:var(--azul-acento);
-  margin-bottom:14px;
-}
-.tarjeta-destacado h4{
-  font-size:1.02rem;
-  margin-bottom:8px;
-}
-.tarjeta-destacado p{
-  font-size:0.9rem;
-  color:var(--gris-texto);
-}
-
-/* ============================================
-   5. TRAYECTORIA (TIMELINE)
-   ============================================ */
-.timeline{
-  position:relative;
-  max-width:820px;
-  margin:0 auto;
-}
-.timeline::before{
-  content:'';
-  position:absolute;
-  left:22px;
-  top:6px;bottom:6px;
-  width:2px;
-  background:var(--gris-borde);
-}
-.timeline-item{
-  position:relative;
-  padding-left:64px;
-  margin-bottom:44px;
-}
-.timeline-item:last-child{margin-bottom:0;}
-.timeline-punto{
-  position:absolute;
-  left:14px; top:4px;
-  width:18px;height:18px;
-  border-radius:50%;
-  background:var(--blanco);
-  border:3px solid var(--azul-acento);
-  z-index:1;
-}
-.timeline-periodo{
-  font-size:0.85rem;
-  font-weight:600;
-  color:var(--azul-acento);
-  margin-bottom:6px;
-  display:block;
-}
-.timeline-cargo{
-  font-size:1.12rem;
-  font-weight:700;
-  margin-bottom:2px;
-}
-.timeline-empresa{
-  font-size:0.95rem;
-  font-weight:600;
-  color:var(--azul-medio);
-  margin-bottom:8px;
-}
-.timeline-desc{
-  color:var(--gris-texto);
-  font-size:0.95rem;
-  max-width:600px;
-}
-
-.formacion-bloque{
-  max-width:820px;
-  margin:60px auto 0;
-  background:var(--blanco);
-  border:1px solid var(--gris-borde);
-  border-radius:var(--radio);
-  padding:32px 34px;
-  box-shadow:var(--sombra);
-}
-.formacion-bloque h4{
-  font-size:1rem;
-  color:var(--azul-acento);
-  margin-bottom:10px;
-  font-weight:600;
-}
-.formacion-bloque .formacion-titulo{
-  font-size:1.15rem;
-  font-weight:700;
-  color:var(--azul-oscuro);
-  margin-bottom:4px;
-}
-.formacion-bloque p{
-  color:var(--gris-texto);
-  font-size:0.95rem;
-}
-.formacion-bloque .badge-titulado{
-  display:inline-block;
-  margin-top:12px;
-  background:var(--azul-claro);
-  color:var(--azul-medio);
-  font-size:0.8rem;
-  font-weight:600;
-  padding:5px 14px;
-  border-radius:999px;
-}
-
-/* ============================================
-   6. SERVICIOS
+   SERVICIOS
    ============================================ */
 .filtros{
   display:flex;
@@ -546,81 +407,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .tarjeta-servicio .btn{align-self:flex-start;}
 
 /* ============================================
-   7. FORMACIÓN CONTINUA / CAPACITACIONES
-   ============================================ */
-.grupo-capacitacion{
-  margin-bottom:38px;
-}
-.grupo-capacitacion h4{
-  font-size:1.02rem;
-  color:var(--azul-medio);
-  margin-bottom:16px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.grupo-capacitacion h4 i{color:var(--azul-acento);}
-
-.lista-chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.chip{
-  background:var(--blanco);
-  border:1px solid var(--gris-borde);
-  color:var(--gris-oscuro);
-  font-size:0.86rem;
-  padding:9px 16px;
-  border-radius:10px;
-  transition:border-color var(--transicion), transform var(--transicion);
-}
-.chip:hover{
-  border-color:var(--azul-acento);
-  transform:translateY(-2px);
-}
-
-/* ============================================
-   7B. OFERTA EDUCATIVA
-   ============================================ */
-.grid-vinculacion{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:24px;
-}
-.tarjeta-vinculacion{
-  background:var(--blanco);
-  border:1px solid var(--gris-borde);
-  border-radius:var(--radio);
-  padding:32px 28px;
-  text-align:left;
-  transition:transform var(--transicion), box-shadow var(--transicion);
-  display:flex;
-  flex-direction:column;
-}
-.tarjeta-vinculacion:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--sombra-hover);
-}
-.icono-vinculacion{
-  width:52px;height:52px;
-  border-radius:14px;
-  background:var(--azul-oscuro);
-  color:var(--blanco);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;
-  margin-bottom:20px;
-}
-.tarjeta-vinculacion h3{font-size:1.05rem;margin-bottom:10px;}
-.tarjeta-vinculacion p{color:var(--gris-texto);font-size:0.92rem;margin-bottom:22px;flex-grow:1;}
-.tarjeta-vinculacion .btn{align-self:flex-start;}
-
-@media (max-width: 980px){
-  .grid-vinculacion{grid-template-columns:1fr;}
-}
-
-/* ============================================
-   8. CONTACTO
+   CONTACTO
    ============================================ */
 .contacto-grid{
   display:grid;
@@ -888,7 +675,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   .hero-grid{grid-template-columns:1fr;gap:44px;}
   .hero-foto-wrap{order:-1;}
   .hero-foto{max-width:280px;}
-  .sobre-grid{grid-template-columns:1fr;gap:40px;}
   .grid-servicios{grid-template-columns:1fr 1fr;}
   .contacto-grid{grid-template-columns:1fr;gap:40px;}
   .footer-grid{grid-template-columns:1fr 1fr;}
@@ -926,11 +712,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   .hero-foto{max-width:300px; margin:0 auto;}
   .hero-chip{display:inline-flex; font-size:0.8rem;}
 
-  .tarjetas-destacado{grid-template-columns:1fr;}
   .grid-servicios{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;gap:36px;}
   .footer-bottom{flex-direction:column;text-align:center;}
-  .formacion-bloque{padding:26px 22px;}
   .form-tarjeta{padding:28px 22px;}
   .whatsapp-flotante{width:52px;height:52px;font-size:1.3rem;bottom:20px;right:20px;}
   .subir-arriba{right:82px;bottom:20px;}
@@ -952,11 +736,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <a href="#inicio" class="nav-marca">Carlos <span>Chiquete</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#inicio" class="nav-link">Inicio</a></li>
-      <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-      <li><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
       <li><a href="#servicios" class="nav-link">Servicios</a></li>
-      <li><a href="#cursos" class="nav-link">Cursos</a></li>
-      <li><a href="#oferta-educativa" class="nav-link">Oferta educativa</a></li>
       <li><a href="#contacto" class="nav-link btn btn-primario nav-cta">Contáctame</a></li>
     </ul>
     <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
@@ -973,14 +753,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   <div class="hero-figura-2"></div>
   <div class="contenedor hero-grid">
     <div>
-      <span class="hero-eyebrow">Lic. en Administración de Empresas y Negocios Internacionales</span>
-      <h1 class="hero-titulo">Lic. Carlos Alonso Chiquete Cázares</h1>
-      <p class="hero-cargo">Coordinación operativa · Orientación familiar · Capacitación y formación</p>
-      <p class="hero-frase">Más de dos décadas de trayectoria combinando gestión operativa, control de calidad, docencia y orientación familiar, con un enfoque constante en el trabajo en equipo y el cumplimiento de metas.</p>
-      <span class="hero-chip"><i class="fa-solid fa-id-badge"></i> Capacitador Externo</span>
+      <span class="hero-eyebrow">Servicios para personas, familias y organizaciones</span>
+      <h1 class="hero-titulo">Carlos Chiquete</h1>
+      <p class="hero-cargo">Orientación familiar · Capacitación · Consultoría</p>
+      <p class="hero-frase">Acompañamiento y herramientas prácticas para fortalecer relaciones, proyectos y equipos de trabajo.</p>
+      <span class="hero-chip"><i class="fa-solid fa-id-badge"></i> Agente Capacitador Externo ante la STPS</span>
       <div class="hero-botones">
-        <a href="#trayectoria" class="btn btn-primario">Conoce mi trayectoria <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#servicios" class="btn btn-secundario">Ver servicios</a>
+        <a href="#servicios" class="btn btn-primario">Conoce los servicios <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contacto" class="btn btn-secundario">Contáctame</a>
       </div>
     </div>
     <div class="hero-foto-wrap">
@@ -992,128 +772,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </header>
 
 <!-- ============================================
-     2. SOBRE MÍ
-     ============================================ -->
-<section class="seccion" id="sobre-mi">
-  <div class="contenedor">
-    <span class="etiqueta-seccion al-aparecer">Sobre mí</span>
-    <h2 class="titulo-seccion al-aparecer">Una trayectoria construida entre la operación, la formación y las personas</h2>
-    <div class="sobre-grid">
-      <div class="sobre-texto al-aparecer">
-        <p>Soy Licenciado en Administración de Empresas y Negocios Internacionales, titulado por el Centro de Estudios Universitarios Benito Juárez. A lo largo de más de veinte años he trabajado en sectores muy distintos entre sí: comercio exterior y aduanas, control de calidad industrial, ventas y atención al cliente, docencia universitaria, coordinación operativa, orientación familiar y también en el sector gubernamental.</p>
-        <p>Esa diversidad de experiencias me ha permitido desarrollar una manera de trabajar centrada en procesos, resultados y personas: sé cómo organizar equipos, cómo dar seguimiento a metas concretas y, al mismo tiempo, cómo acompañar a las personas en procesos delicados, como lo fue mi labor como orientador familiar y responsable de pláticas prematrimoniales en el DIF Municipal de Tijuana.</p>
-        <p>He complementado mi formación con decenas de capacitaciones en temas de capital humano, coaching, prevención, comunicación y calidad, lo que me permite ofrecer un acompañamiento informado tanto a empresas como a familias.</p>
-      </div>
-      <div class="tarjetas-destacado al-aparecer">
-        <div class="tarjeta-destacado">
-          <i class="fa-solid fa-people-arrows"></i>
-          <h4>Orientación familiar</h4>
-          <p>Más de 6 años como orientador familiar y responsable de pláticas prematrimoniales en el DIF Municipal de Tijuana.</p>
-        </div>
-        <div class="tarjeta-destacado">
-          <i class="fa-solid fa-chalkboard-user"></i>
-          <h4>Docencia y capacitación</h4>
-          <p>Experiencia como docente universitario y certificación ECO0217 para impartición de cursos de capital humano.</p>
-        </div>
-        <div class="tarjeta-destacado">
-          <i class="fa-solid fa-gears"></i>
-          <h4>Operación y calidad</h4>
-          <p>Trayectoria en coordinación operativa, control de calidad y procesos con enfoque en ISO 9001 y 14001.</p>
-        </div>
-        <div class="tarjeta-destacado">
-          <i class="fa-solid fa-handshake"></i>
-          <h4>Comercio exterior</h4>
-          <p>Experiencia en revisión de mercancía, inventarios y cruce de importación/exportación en agencia aduanal.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     3. TRAYECTORIA
-     ============================================ -->
-<section class="seccion seccion-gris" id="trayectoria">
-  <div class="contenedor">
-    <span class="etiqueta-seccion al-aparecer">Mi trayectoria</span>
-    <h2 class="titulo-seccion al-aparecer">Experiencia profesional</h2>
-    <p class="intro-seccion al-aparecer">Un recorrido por las organizaciones y responsabilidades que han marcado mi desarrollo profesional.</p>
-
-    <div class="timeline al-aparecer">
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">Mayo 2023 — Octubre 2024</span>
-        <h3 class="timeline-cargo">Coordinador operativo</h3>
-        <p class="timeline-empresa">Universidad Escomex</p>
-        <p class="timeline-desc">Coordinación de actividades operativas dentro de la institución.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">Junio 2018 — Junio 2019</span>
-        <h3 class="timeline-cargo">Docente</h3>
-        <p class="timeline-empresa">Sistema Universitario José Vasconcelos</p>
-        <p class="timeline-desc">Impartición de clases a nivel universitario.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">Octubre 2011 — Diciembre 2017</span>
-        <h3 class="timeline-cargo">Jefe de departamento de pláticas prematrimoniales y orientador familiar</h3>
-        <p class="timeline-empresa">Desarrollo Integral para la Familia — DIF Municipal Tijuana</p>
-        <p class="timeline-desc">Responsable del área de pláticas prematrimoniales y de la orientación familiar en el municipio de Tijuana.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">Febrero 2008 — Junio 2011</span>
-        <h3 class="timeline-cargo">Ejecutivo en ventas</h3>
-        <p class="timeline-empresa">Instituto Educativo del Noroeste A.C. (Cetys Universidad)</p>
-        <p class="timeline-desc">Gestión de ventas dentro de la institución educativa.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">Febrero 2007 — Febrero 2008</span>
-        <h3 class="timeline-cargo">Revisión de mercancía</h3>
-        <p class="timeline-empresa">Agencia Aduanal Oscar Mayer S.C. (OMG)</p>
-        <p class="timeline-desc">Revisión de mercancía, manejo de almacén e inventarios, y cruce de mercancías de importación y exportación.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">2003 — 2007</span>
-        <h3 class="timeline-cargo">Monitoreo de contenedores marítimos</h3>
-        <p class="timeline-empresa">Samsung de México (SAMEX)</p>
-        <p class="timeline-desc">Monitoreo en el sistema SAP de los contenedores marítimos.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-punto"></span>
-        <span class="timeline-periodo">1999 — 2003</span>
-        <h3 class="timeline-cargo">Control de calidad</h3>
-        <p class="timeline-empresa">Polk Audio de México</p>
-        <p class="timeline-desc">Actividades de control de calidad dentro de la planta.</p>
-      </div>
-    </div>
-
-    <div class="formacion-bloque al-aparecer">
-      <h4><i class="fa-solid fa-graduation-cap"></i> Formación académica</h4>
-      <p class="formacion-titulo">Licenciatura en Administración de Empresas y Negocios Internacionales</p>
-      <p>Centro de Estudios Universitarios Benito Juárez · 2009 — 2012</p>
-      <span class="badge-titulado">Titulado</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     4 y 5. SERVICIOS + FILTROS
+     SERVICIOS
      ============================================ -->
 <section class="seccion" id="servicios">
   <div class="contenedor">
     <span class="etiqueta-seccion al-aparecer">Servicios</span>
     <h2 class="titulo-seccion al-aparecer">Cómo puedo ayudarte</h2>
-    <p class="intro-seccion al-aparecer">Servicios construidos sobre mi experiencia real en orientación familiar, capacitación y gestión operativa.</p>
+    <p class="intro-seccion al-aparecer">Acompañamiento y capacitación para personas, familias y organizaciones.</p>
 
     <div class="filtros al-aparecer">
       <button class="filtro-btn activo" data-filtro="todos">Todos</button>
       <button class="filtro-btn" data-filtro="familiar">Familiar</button>
       <button class="filtro-btn" data-filtro="capacitacion">Capacitación</button>
-      <button class="filtro-btn" data-filtro="operaciones">Calidad y operaciones</button>
       <button class="filtro-btn" data-filtro="finanzas">Finanzas</button>
       <button class="filtro-btn" data-filtro="legal">Asesoría jurídica y legal</button>
     </div>
@@ -1127,9 +797,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <p>Acompañamiento a familias en temas de comunicación, dinámica familiar y manejo de conflictos.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
           data-servicio="Orientación y asesoría familiar"
-          data-descripcion="Acompañamiento personalizado dirigido a familias que buscan mejorar su comunicación, resolver conflictos y fortalecer sus vínculos, con base en más de seis años de experiencia como orientador familiar en el DIF Municipal de Tijuana."
+          data-descripcion="Acompañamiento personalizado para mejorar la comunicación familiar, atender conflictos y fortalecer los vínculos."
           data-incluye="Sesiones de orientación familiar|Apoyo en manejo de conflictos y comunicación|Temas de tipos de familia y dinámica familiar"
           data-dirigido="Familias y personas que buscan orientación y acompañamiento en su dinámica familiar.">
+          Conocer más
+        </button>
+      </div>
+
+      <div class="tarjeta-servicio" data-categoria="capacitacion">
+        <div class="icono-servicio"><i class="fa-solid fa-compass"></i></div>
+        <h3>Liderazgo estratégico</h3>
+        <p>Capacitación para fortalecer el liderazgo, la toma de decisiones y la coordinación de equipos.</p>
+        <button class="btn btn-secundario btn-pequeno btn-modal"
+          data-servicio="Liderazgo estratégico"
+          data-descripcion="Taller práctico para desarrollar habilidades de liderazgo, definir objetivos y fortalecer la colaboración en los equipos."
+          data-incluye="Herramientas para liderar equipos|Toma de decisiones y comunicación|Planeación y seguimiento de objetivos"
+          data-dirigido="Personas emprendedoras, responsables de equipos y organizaciones.">
           Conocer más
         </button>
       </div>
@@ -1141,7 +824,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <p>Sesiones dirigidas a parejas que se preparan para el matrimonio, con base en el manual oficial de pláticas prematrimoniales.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
           data-servicio="Pláticas prematrimoniales"
-          data-descripcion="Talleres y pláticas dirigidas a parejas que están por contraer matrimonio, basados en el Manual de Pláticas Prematrimoniales y en la experiencia como jefe de este departamento en el DIF Municipal de Tijuana."
+          data-descripcion="Sesiones para parejas que están por contraer matrimonio, con temas para dialogar sobre la vida en pareja y prepararse para esta etapa."
           data-incluye="Sesiones guiadas con base en el manual oficial|Temas de comunicación y expectativas en pareja|Orientación previa al matrimonio"
           data-dirigido="Parejas que se preparan para contraer matrimonio.">
           Conocer más
@@ -1162,28 +845,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         </button>
       </div>
 
-      <!-- Servicio 4 -->
-      <div class="tarjeta-servicio" data-categoria="capacitacion">
-        <div class="icono-servicio"><i class="fa-solid fa-chalkboard-user"></i></div>
-        <h3>Capacitación de capital humano</h3>
-        <p>Impartición de cursos y talleres para equipos de trabajo, con certificación ECO0217 en impartición de cursos.</p>
-        <button class="btn btn-secundario btn-pequeno btn-modal"
-          data-servicio="Capacitación de capital humano"
-          data-descripcion="Diseño e impartición de cursos y talleres orientados al desarrollo de equipos de trabajo, respaldados por la Certificación ECO0217 en impartición de cursos de capital humano y por experiencia docente a nivel universitario."
-          data-incluye="Cursos de capital humano|Talleres para equipos de trabajo|Enfoque práctico basado en experiencia docente"
-          data-dirigido="Empresas e instituciones que buscan capacitar a su personal.">
-          Conocer más
-        </button>
-      </div>
-
       <!-- Servicio 5 -->
       <div class="tarjeta-servicio" data-categoria="capacitacion">
         <div class="icono-servicio"><i class="fa-solid fa-person-chalkboard"></i></div>
         <h3>Coaching</h3>
-        <p>Sesiones de coaching orientadas al desarrollo personal y profesional, con base en el Diplomado en Coaching (Cetys Universidad).</p>
+        <p>Acompañamiento para definir objetivos, reconocer fortalezas y avanzar en metas personales o profesionales.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
           data-servicio="Coaching"
-          data-descripcion="Acompañamiento tipo coaching para personas y equipos que buscan claridad y dirección en sus objetivos, con base en el Diplomado en Coaching cursado en Cetys Universidad."
+          data-descripcion="Sesiones de acompañamiento para personas y equipos que buscan claridad, dirección y seguimiento en sus objetivos."
           data-incluye="Sesiones de coaching individual|Definición de metas y seguimiento|Herramientas de comunicación y estrategia"
           data-dirigido="Personas y equipos que buscan acompañamiento para el logro de sus metas.">
           Conocer más
@@ -1193,27 +862,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <!-- Servicio 6 -->
       <div class="tarjeta-servicio" data-categoria="legal">
         <div class="icono-servicio"><i class="fa-solid fa-scale-balanced"></i></div>
-        <h3>Asesoría jurídica y legal</h3>
+        <h3>Asesoría y consultoría legal</h3>
         <p>Orientación inicial para identificar opciones y canalizar cada caso hacia la atención jurídica adecuada.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
-          data-servicio="Asesoría jurídica y legal"
+          data-servicio="Asesoría y consultoría legal"
           data-descripcion="Orientación inicial sobre situaciones jurídicas y legales, con información clara para identificar alternativas y, cuando sea necesario, canalizar el caso con un profesional especializado."
           data-incluye="Escucha y revisión inicial del caso|Información general sobre opciones legales|Orientación para canalización especializada"
           data-dirigido="Personas que necesitan claridad sobre una situación jurídica o legal.">
-          Conocer más
-        </button>
-      </div>
-
-      <!-- Servicio 7 -->
-      <div class="tarjeta-servicio" data-categoria="operaciones">
-        <div class="icono-servicio"><i class="fa-solid fa-gears"></i></div>
-        <h3>Consultoría en calidad y procesos</h3>
-        <p>Apoyo en la organización de procesos operativos y calidad, con base en experiencia en coordinación operativa y normas ISO.</p>
-        <button class="btn btn-secundario btn-pequeno btn-modal"
-          data-servicio="Consultoría en calidad y procesos"
-          data-descripcion="Acompañamiento a equipos y organizaciones en la mejora de sus procesos operativos y de calidad, con base en experiencia en coordinación operativa y en capacitaciones de Calidad Total, Calidad en el Servicio e ISO 9001 y 14001."
-          data-incluye="Revisión de procesos operativos|Recomendaciones con enfoque en calidad total|Apoyo en cumplimiento de metas de equipo"
-          data-dirigido="Equipos y organizaciones que buscan ordenar y mejorar sus procesos.">
           Conocer más
         </button>
       </div>
@@ -1222,10 +877,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <div class="tarjeta-servicio" data-categoria="finanzas">
         <div class="icono-servicio"><i class="fa-solid fa-sack-dollar"></i></div>
         <h3>Educación financiera</h3>
-        <p>Sesiones sobre finanzas personales, con base en capacitaciones de Educación Financiera y libertad financiera.</p>
+        <p>Sesiones para aprender a organizar las finanzas personales y familiares y planear un presupuesto.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
           data-servicio="Educación financiera"
-          data-descripcion="Sesiones orientadas a mejorar el manejo de las finanzas personales o familiares, con base en las capacitaciones '12 Pasos para la Libertad Financiera' y Educación Financiera de CONDUSEF."
+          data-descripcion="Sesiones prácticas para conocer herramientas de presupuesto, organización financiera y planeación familiar."
           data-incluye="Fundamentos de organización financiera personal|Herramientas para el manejo del presupuesto familiar|Temas de libertad financiera"
           data-dirigido="Personas y familias interesadas en mejorar el manejo de sus finanzas.">
           Conocer más
@@ -1235,10 +890,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <!-- Servicio 9 -->
       <div class="tarjeta-servicio" data-categoria="capacitacion">
         <div class="icono-servicio"><i class="fa-solid fa-briefcase"></i></div>
-        <h3>Taller de emprendimiento</h3>
+        <h3>Taller para emprendedores</h3>
         <p>Diseño de estrategias para iniciar o fortalecer un proyecto propio, con enfoque práctico y orientado a resultados.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
-          data-servicio="Taller de emprendimiento"
+          data-servicio="Taller para emprendedores"
           data-descripcion="Taller práctico para personas que desean iniciar o fortalecer un proyecto emprendedor, con enfoque en ideas de negocio, organización, innovación y metas concretas."
           data-incluye="Identificación de ideas y oportunidades de negocio|Planeación básica del proyecto|Estrategias para organización y operación inicial"
           data-dirigido="Personas interesadas en emprender, crear un proyecto o fortalecer una idea de negocio.">
@@ -1246,86 +901,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         </button>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     6. FORMACIÓN CONTINUA Y CERTIFICACIONES
-     ============================================ -->
-<section class="seccion seccion-gris" id="cursos">
-  <div class="contenedor">
-    <span class="etiqueta-seccion al-aparecer">Formación continua</span>
-    <h2 class="titulo-seccion al-aparecer">Capacitaciones y certificaciones</h2>
-    <p class="intro-seccion al-aparecer">A lo largo de mi trayectoria he complementado mi formación con capacitaciones constantes en distintas áreas.</p>
-
-    <div class="al-aparecer">
-      <div class="grupo-capacitacion">
-        <h4><i class="fa-solid fa-people-group"></i> Capital humano, coaching y ventas</h4>
-        <div class="lista-chips">
-          <span class="chip">Certificación ECO0217 — Impartición de cursos de capital humano</span>
-          <span class="chip">Diplomado en Coaching (Cetys Universidad)</span>
-          <span class="chip">Curso Integral de Ventas (Cetys Universidad)</span>
-          <span class="chip">Curso de Atención al Cliente (Cetys Universidad)</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     7B. OFERTA EDUCATIVA
-     ============================================ -->
-<section class="seccion" id="oferta-educativa">
-  <div class="contenedor">
-    <span class="etiqueta-seccion al-aparecer">Vinculaciones y proyectos</span>
-    <h2 class="titulo-seccion al-aparecer">Conoce las instituciones y proyectos con los que colaboro</h2>
-    <p class="intro-seccion al-aparecer">Puedo orientarte sobre opciones educativas y compartir información de proyectos que trabajan por el bienestar de las familias.</p>
-
-    <div class="grid-vinculacion al-aparecer">
-      <div class="tarjeta-vinculacion">
-        <div class="icono-vinculacion"><i class="fa-solid fa-building-columns"></i></div>
-        <h3>Universidad Escomex</h3>
-        <p>Vinculación con la Universidad Escomex para orientarte sobre su oferta de licenciaturas y posgrados.</p>
-        <button class="btn btn-secundario btn-pequeno btn-modal"
-          data-servicio="Universidad Escomex"
-          data-descripcion="Estoy vinculado con la Universidad Escomex, institución donde también me desempeñé como coordinador operativo, y puedo orientarte sobre su oferta educativa y proceso de inscripción."
-          data-incluye="Información sobre licenciaturas y posgrados|Orientación sobre el proceso de inscripción|Resolución de dudas generales sobre la institución"
-          data-dirigido="Personas interesadas en estudiar en la Universidad Escomex.">
-          Conocer más
-        </button>
-      </div>
-      <div class="tarjeta-vinculacion">
-        <div class="icono-vinculacion"><i class="fa-solid fa-school"></i></div>
-        <h3>Bachillerato Interamericano Semiescolarizado</h3>
-        <p>Vinculación con el Bachillerato Interamericano Semiescolarizado para orientarte sobre su oferta educativa.</p>
-        <button class="btn btn-secundario btn-pequeno btn-modal"
-          data-servicio="Bachillerato Interamericano Semiescolarizado"
-          data-descripcion="Estoy vinculado con el Bachillerato Interamericano Semiescolarizado y puedo orientarte sobre su oferta educativa y proceso de inscripción."
-          data-incluye="Información sobre el plan de estudios|Orientación sobre el proceso de inscripción|Resolución de dudas generales sobre la institución"
-          data-dirigido="Estudiantes y padres de familia interesados en el Bachillerato Interamericano Semiescolarizado.">
-          Conocer más
-        </button>
-      </div>
-      <div class="tarjeta-vinculacion">
-        <div class="icono-vinculacion"><i class="fa-solid fa-hand-holding-heart"></i></div>
-        <h3>Vida y Aliento para la Familia A.C.</h3>
-        <p>Asesoría y consultoría para conocer el trabajo de esta asociación civil y encontrar formas de apoyar o donar.</p>
+      <div class="tarjeta-servicio" data-categoria="familiar">
+        <div class="icono-servicio"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <h3>Vida y Aliento para la Familia</h3>
+        <p>Información sobre iniciativas de apoyo a las familias y maneras de colaborar con la asociación.</p>
         <button class="btn btn-secundario btn-pequeno btn-modal"
           data-servicio="Vida y Aliento para la Familia A.C."
-          data-descripcion="Vida y Aliento para la Familia A.C. es una asociación civil dedicada a apoyar a las familias. Solicita información para conocer lo que hacemos, nuestras iniciativas y las formas disponibles de colaborar o donar."
-          data-incluye="Información sobre la labor de la asociación|Orientación sobre sus iniciativas|Opciones para colaborar o donar"
+          data-descripcion="Conoce el trabajo, las iniciativas y las formas de colaboración de Vida y Aliento para la Familia A.C."
+          data-incluye="Información sobre la labor de la asociación|Orientación sobre sus iniciativas|Opciones para colaborar"
           data-dirigido="Personas interesadas en conocer y apoyar a Vida y Aliento para la Familia A.C.">
-          Conocer y donar
+          Conocer más
         </button>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- ============================================
-     7. CONTACTO
+     CONTACTO
      ============================================ -->
 <section class="seccion" id="contacto">
   <div class="contenedor">
@@ -1374,13 +968,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
               <option value="">Selecciona un servicio</option>
               <option value="Orientación y asesoría familiar">Orientación y asesoría familiar</option>
               <option value="Pláticas prematrimoniales">Pláticas prematrimoniales</option>
-              <option value="Capacitación de capital humano">Capacitación de capital humano</option>
+              <option value="Escuela para matrimonios">Escuela para matrimonios</option>
               <option value="Coaching">Coaching</option>
-              <option value="Consultoría en calidad y procesos">Consultoría en calidad y procesos</option>
+              <option value="Liderazgo estratégico">Liderazgo estratégico</option>
+              <option value="Asesoría y consultoría legal">Asesoría y consultoría legal</option>
               <option value="Educación financiera">Educación financiera</option>
-              <option value="Universidad Escomex">Universidad Escomex</option>
-              <option value="Bachillerato Interamericano Semiescolarizado">Bachillerato Interamericano Semiescolarizado</option>
-              <option value="Vida y Aliento para la Familia A.C.">Vida y Aliento para la Familia A.C.</option>
+              <option value="Taller para emprendedores">Taller para emprendedores</option>
+              <option value="Vida y Aliento para la Familia A.C.">Vida y Aliento para la Familia</option>
               <option value="Otro">Otro</option>
             </select>
           </div>
@@ -1412,16 +1006,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <div class="footer-grid">
       <div class="footer-col">
         <div class="footer-marca">Carlos <span>Chiquete</span></div>
-        <p>Lic. en Administración de Empresas y Negocios Internacionales. Orientación familiar, capacitación y consultoría operativa.</p>
+        <p>Orientación familiar, capacitación y consultoría para personas, familias y organizaciones.</p>
       </div>
       <div class="footer-col">
         <h4>Enlaces rápidos</h4>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#trayectoria">Trayectoria</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#cursos">Cursos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -1459,7 +1050,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 <!-- ============================================
      WHATSAPP FLOTANTE Y BOTÓN SUBIR
      ============================================ -->
-<!-- Número tomado del CV: 664 822 84 02 (lada de México +52) -->
 <a href="https://wa.me/526648228402?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
